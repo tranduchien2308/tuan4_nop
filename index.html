@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        * {
+            margin: 0px auto;
+            padding: 0px;
+        }
+        
+        body {
+            background-color: url(img/background.png);
+        }
+        
+        .wrapper {
+            height: 700px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+        
+        nav {
+            height: 50px;
+            width: 100%;
+            background-color: blanchedalmond;
+            line-height: 50px;
+        }
+        
+        header {
+            height: 50px;
+            width: 100%;
+            background-color: url(img/Header.png);
+            text-align: center;
+        }
+        
+        h1 {
+            color: whitesmoke;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px yellow;
+        }
+        
+        h1:hover {
+            transform: rotate(45deg);
+        }
+        
+        .content {
+            height: 300px;
+            width: 100%;
+            background-color: azure;
+        }
+        
+        aside {
+            width: 40%;
+            height: 100%;
+            background-color: rgb(91, 216, 112);
+            float: left;
+        }
+        
+        section {
+            width: 60%;
+            height: 100%;
+            background-color: rgb(165, 126, 67);
+            float: left;
+            float: left;
+        }
+        
+        .menu li {
+            height: 100%;
+            width: 150px;
+            background-color: blanchedalmond;
+            float: left;
+            list-style: none;
+            text-indent: 20px;
+            position: relative;
+        }
+        
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        
+        .menu li:hover {
+            background-color: greenyellow;
+        }
+        
+        li:hover>a {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+            color: brown;
+        }
+        
+        .menu li .submenu {
+            display: none;
+            position: absolute;
+        }
+        
+        .menu li:hover .submenu {
+            display: block;
+        }
+        
+        nav span form #submit {
+            border-radius: 50%;
+            padding: 3px;
+            margin: 3px;
+        }
+        
+        nav span form #txtEmail {
+            padding: 3px;
+        }
+        
+        .wrapper .content aside article img:hover {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="https://24h.com.vn">HOME</a>
+                </li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">CONTACT</a>
+                    <ul class="submenu">
+                        <li><a href="">PHONE</a></li>
+                        <li><a href="">INTERNET</a></li>
+                        <li><a href="">TIVI</a></li>
+                    </ul>
+                </li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+            <span>
+                <from action="dangky.php">
+                    <label for="lblEmail">Email:</label>
+                        <input type="email" name="txtEmail" id="txtEmail" required placeholder="Email your">
+                        <input type="submit" value="GO" id="submit">
+                    
+                
+                </from>
+            </span>
+        </nav>
+        <header>
+            <h1>GAME SHOW</h1>
+        </header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h1>HOAT DONG 1</h1>
+                    <img src="img/h1.PNG" alt="" srcset="">
+                </article>
+                <article>
+                    <h1>HOAT DONG 2</h1>
+                    <img src="img/h1.PNG" alt="" srcset="">
+                </article>
+                <article>
+                    <h1>HOAT DONG 3</h1>
+                    <img src="img/h1.PNG" alt="" srcset="">
+                </article>
+            </aside>
+            <section>
+                <article>
+                    <form action="dangki.php" method="get">
+                        <fieldset>
+                            <legend>Thông tin đăng kí</legend>
+                            <label for="lblHoten">Họ tên:</label>
+                            <input type="text" name="txtHoTen" id="txtHoTen" required placeholder="Nhập tên"><br><br>
+                            <label for="lblNgaysinh">Ngày sinh:</label>
+                            <input type="date" name="txtNgaysinh" id="txtNgaysinh" required placeholder="Ngày sinh" pattern="đ/MM/yyyy"><br><br>
+                            <label for=""></label>
+                            <input type="text"><br><br>
+                            <label for=""></label>
+                            <input type="text"><br><br>
+                            <label for=""></label>
+                            <input type="text"><br><br>
+                            <label for=""></label>
+                            <input type="text"><br><br>
+                            <input type="submit" value="GO">
+
+                        </fieldset>
+                    </form>
+                </article>
+            </section>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
